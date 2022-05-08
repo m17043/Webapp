@@ -15,7 +15,7 @@ const db = new sqlite3.Database('sample.db');
 
 app.get("/",(req,res) => {
     db.serialize( () => {
-        db.all("SELECT * FROM sample INNER JOIN money ON sample.価格 = money.価格;", (error, price) => {
+        db.all("SELECT * FROM sample INNER JOIN money ON sample.価格 = money.価格 AND sample.日付 = money.日付;", (error, price) => {
             if(error){
                 console.log('Error:', error);
                 return;
