@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%=text %> </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% for( let row of price ) { %>            
+    <table border="1" width="20%"> 
+        <tr>
+            <th>id</th>
+            <th>品名</th>
+            <th>個数</th>
+            <th>価格</th>
+            <th>店名</th>
+            <th>残高</th>
+        </tr>
+        <tr>
+            <td><%= row.id %></td>
+            <td><%= row.品名 %></td>
+            <td><%= row.個数 %></td>
+            <td><%= row.価格 %></td>
+            <td><%= row.店名 %></td>
+            <td><%= row.残高 %></td>
+        </tr>
+    </table>  
+        <% } %> 
 
-    </head>
-    <body>
-        <% var obj = content[i]; %>
-        <td><%= obj.text %></td>
-    </body>
+</body>
 </html>
